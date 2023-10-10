@@ -22,7 +22,21 @@ io.on("connection",(socket)=>{
    socket.on("draw",(data)=>{
     console.log(data);
     io.emit("broadcast-points", data);
+   
    })
+   socket.on("mouseup",()=>{
+    console.log("stopped");
+    io.emit("stop-points", "data");
+   })
+   socket.on("mousedown",()=>{
+    console.log("start");
+    io.emit("start-points", "data");
+   })
+   socket.on("clear-canvas",()=>{
+    console.log("clear");
+    io.emit("clear-canvas", "clear");
+   })
+
   
 })
 
