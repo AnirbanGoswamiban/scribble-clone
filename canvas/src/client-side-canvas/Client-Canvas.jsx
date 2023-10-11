@@ -4,7 +4,7 @@ import io from 'socket.io-client';
 function Clientcanvas() {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
-  const socket = io('https://scribble-clone.vercel.app')
+  const socket = io('http://scribble-clone.vercel.app')
   useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext('2d');

@@ -6,7 +6,7 @@ function DrawingCanvas() {
   const isDrawing = useRef(false);
   const lastX = useRef(0);
   const lastY = useRef(0);
-  const socket = io('https://scribble-clone.vercel.app');
+  const socket = io('http://scribble-clone.vercel.app');
 
   useEffect(() => {
     const canvas = canvasRef.current;
