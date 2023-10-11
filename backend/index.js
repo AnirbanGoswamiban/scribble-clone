@@ -18,11 +18,7 @@ const io=new Server(server,{
 })
 
 const cors=require('cors')
-// app.use(cors())
-app.use(cors({
-    origin: ["http://localhost:5173/canvas","http://localhost:5173/client"],
-    methods: ['GET', 'POST'],  
-}))
+app.use(cors())
 
 io.on("connection",(socket)=>{
     console.log(`user joined ...${socket.id}`);
